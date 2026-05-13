@@ -1,4 +1,6 @@
-# Humanitarian Logistics — Social Media Analyzer
+# Humanitarian Logistics - Social Media Analyzer
+
+![Version](https://img.shields.io/github/v/release/dangtrungan/humanitarian-logistics)
 
 A dual-language (Java + Python) system that analyzes social media sentiment during natural disasters to inform and improve humanitarian response efforts.
 
