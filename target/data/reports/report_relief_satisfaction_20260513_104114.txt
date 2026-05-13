@@ -1,0 +1,33 @@
+======================================================================
+HUMANITARIAN LOGISTICS ANALYSIS REPORT
+======================================================================
+Analysis: Relief Satisfaction Analysis (Bài toán 3)
+Type: relief_satisfaction
+----------------------------------------------------------------------
+SUMMARY:
+Hài lòng nhất: 'Thực phẩm' (100% tích cực). Không hài lòng nhất: 'Hỗ trợ y tế' (100% tiêu cực). Tiếp tục duy trì hiệu quả ở lĩnh vực Thực phẩm.
+----------------------------------------------------------------------
+DETAILED DATA:
+  mostSatisfied: Thực phẩm
+  reliefStats: {Tiền mặt=com.humanitarian.logistics.analyzer.ReliefSatisfactionAnalyzer$ReliefStats@3a4cfd58, Nhà ở=com.humanitarian.logistics.analyzer.ReliefSatisfactionAnalyzer$ReliefStats@13328a19, Hỗ trợ y tế=com.humanitarian.logistics.analyzer.ReliefSatisfactionAnalyzer$ReliefStats@7ac6e526, Thực phẩm=com.humanitarian.logistics.analyzer.ReliefSatisfactionAnalyzer$ReliefStats@deaa2de, Giao thông=com.humanitarian.logistics.analyzer.ReliefSatisfactionAnalyzer$ReliefStats@50112806}
+  mostDissatisfied: Hỗ trợ y tế
+----------------------------------------------------------------------
+CHART DATA (15 points):
+  Label: Tiền mặt | Value: 0.00 | Category: Hài lòng | Series: Tích cực
+  Label: Tiền mặt | Value: 0.00 | Category: Không hài lòng | Series: Tiêu cực
+  Label: Tiền mặt | Value: 40.00 | Category: Trung tính | Series: Trung tính
+  Label: Nhà ở | Value: 0.00 | Category: Hài lòng | Series: Tích cực
+  Label: Nhà ở | Value: 0.00 | Category: Không hài lòng | Series: Tiêu cực
+  Label: Nhà ở | Value: 0.00 | Category: Trung tính | Series: Trung tính
+  Label: Hỗ trợ y tế | Value: 0.00 | Category: Hài lòng | Series: Tích cực
+  Label: Hỗ trợ y tế | Value: 40.00 | Category: Không hài lòng | Series: Tiêu cực
+  Label: Hỗ trợ y tế | Value: 0.00 | Category: Trung tính | Series: Trung tính
+  Label: Thực phẩm | Value: 49.00 | Category: Hài lòng | Series: Tích cực
+  Label: Thực phẩm | Value: 0.00 | Category: Không hài lòng | Series: Tiêu cực
+  Label: Thực phẩm | Value: 0.00 | Category: Trung tính | Series: Trung tính
+  Label: Giao thông | Value: 0.00 | Category: Hài lòng | Series: Tích cực
+  Label: Giao thông | Value: 34.00 | Category: Không hài lòng | Series: Tiêu cực
+  Label: Giao thông | Value: 34.00 | Category: Trung tính | Series: Trung tính
+======================================================================
+Generated: 2026-05-13T10:41:14.602419360
+======================================================================

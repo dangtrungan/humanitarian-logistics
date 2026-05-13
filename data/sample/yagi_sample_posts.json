@@ -1,0 +1,17 @@
+[
+  {"id":"tw1","source":"twitter","content":"Bão Yagi quá mạnh, nhà cửa bị sập hoàn toàn, mất hết tài sản","timestamp":"2024-09-07T08:30:00","language":"vi"},
+  {"id":"tw2","source":"twitter","content":"Cảm ơn đội cứu hộ đã giúp đỡ người dân vùng lũ kịp thời","timestamp":"2024-09-07T10:15:00","language":"vi"},
+  {"id":"fb1","source":"facebook","content":"Đường sá bị ngập nặng, giao thông tê liệt, không thể di chuyển được","timestamp":"2024-09-08T09:00:00","language":"vi"},
+  {"id":"fb2","source":"facebook","content":"Tinh thần đoàn kết của người Việt thật đáng khâm phục","timestamp":"2024-09-08T14:20:00","language":"vi"},
+  {"id":"tt1","source":"tiktok","content":"Mất điện mất nước đã 3 ngày, cuộc sống vô cùng khó khăn","timestamp":"2024-09-09T07:45:00","language":"vi"},
+  {"id":"tt2","source":"tiktok","content":"Hàng cứu trợ đã đến kịp thời, cảm ơn tấm lòng hảo tâm","timestamp":"2024-09-10T11:30:00","language":"vi"},
+  {"id":"yt1","source":"youtube","content":"Cơ sở hạ tầng bị phá hủy nghiêm trọng, cầu đường sạt lở nặng","timestamp":"2024-09-08T16:00:00","language":"vi"},
+  {"id":"yt2","source":"youtube","content":"Đội ngũ y tế đang làm việc không mệt mỏi để cứu chữa người bị thương","timestamp":"2024-09-11T09:15:00","language":"vi"},
+  {"id":"tw3","source":"twitter","content":"Chính quyền đã hỗ trợ tiền mặt kịp thời cho các hộ dân bị thiệt hại","timestamp":"2024-09-12T10:00:00","language":"vi"},
+  {"id":"fb3","source":"facebook","content":"Nhà cửa hư hỏng nặng, cần được hỗ trợ sửa chữa gấp","timestamp":"2024-09-09T13:20:00","language":"vi"},
+  {"id":"tt3","source":"tiktok","content":"Các đơn vị đang khẩn trương khắc phục hậu quả bão","timestamp":"2024-09-15T08:30:00","language":"vi"},
+  {"id":"yt3","source":"youtube","content":"Người dân vùng lũ đang rất cần thực phẩm và nước uống","timestamp":"2024-09-10T15:45:00","language":"vi"},
+  {"id":"tw4","source":"twitter","content":"Hỗ trợ y tế đã được triển khai tốt, người dân được chăm sóc sức khỏe","timestamp":"2024-09-16T10:30:00","language":"vi"},
+  {"id":"fb4","source":"facebook","content":"Giao thông vẫn còn khó khăn, nhiều tuyến đường chưa thể đi lại","timestamp":"2024-09-18T09:00:00","language":"vi"},
+  {"id":"tt4","source":"tiktok","content":"Hy vọng cuộc sống sẽ sớm trở lại bình thường","timestamp":"2024-09-20T11:00:00","language":"vi"}
+]

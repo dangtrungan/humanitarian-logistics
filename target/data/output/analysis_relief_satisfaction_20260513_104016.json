@@ -1,0 +1,133 @@
+{
+  "analysisName": "Relief Satisfaction Analysis (Bài toán 3)",
+  "analysisType": "relief_satisfaction",
+  "data": {
+    "mostSatisfied": "Thực phẩm",
+    "reliefStats": {
+      "Tiền mặt": {
+        "total": 34,
+        "positive": 0,
+        "negative": 0,
+        "neutral": 34
+      },
+      "Nhà ở": {
+        "total": 0,
+        "positive": 0,
+        "negative": 0,
+        "neutral": 0
+      },
+      "Hỗ trợ y tế": {
+        "total": 26,
+        "positive": 0,
+        "negative": 26,
+        "neutral": 0
+      },
+      "Thực phẩm": {
+        "total": 30,
+        "positive": 30,
+        "negative": 0,
+        "neutral": 0
+      },
+      "Giao thông": {
+        "total": 55,
+        "positive": 0,
+        "negative": 28,
+        "neutral": 27
+      }
+    },
+    "mostDissatisfied": "Hỗ trợ y tế"
+  },
+  "chartData": [
+    {
+      "label": "Tiền mặt",
+      "value": 0.0,
+      "category": "Hài lòng",
+      "series": "Tích cực"
+    },
+    {
+      "label": "Tiền mặt",
+      "value": 0.0,
+      "category": "Không hài lòng",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "Tiền mặt",
+      "value": 34.0,
+      "category": "Trung tính",
+      "series": "Trung tính"
+    },
+    {
+      "label": "Nhà ở",
+      "value": 0.0,
+      "category": "Hài lòng",
+      "series": "Tích cực"
+    },
+    {
+      "label": "Nhà ở",
+      "value": 0.0,
+      "category": "Không hài lòng",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "Nhà ở",
+      "value": 0.0,
+      "category": "Trung tính",
+      "series": "Trung tính"
+    },
+    {
+      "label": "Hỗ trợ y tế",
+      "value": 0.0,
+      "category": "Hài lòng",
+      "series": "Tích cực"
+    },
+    {
+      "label": "Hỗ trợ y tế",
+      "value": 26.0,
+      "category": "Không hài lòng",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "Hỗ trợ y tế",
+      "value": 0.0,
+      "category": "Trung tính",
+      "series": "Trung tính"
+    },
+    {
+      "label": "Thực phẩm",
+      "value": 30.0,
+      "category": "Hài lòng",
+      "series": "Tích cực"
+    },
+    {
+      "label": "Thực phẩm",
+      "value": 0.0,
+      "category": "Không hài lòng",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "Thực phẩm",
+      "value": 0.0,
+      "category": "Trung tính",
+      "series": "Trung tính"
+    },
+    {
+      "label": "Giao thông",
+      "value": 0.0,
+      "category": "Hài lòng",
+      "series": "Tích cực"
+    },
+    {
+      "label": "Giao thông",
+      "value": 28.0,
+      "category": "Không hài lòng",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "Giao thông",
+      "value": 27.0,
+      "category": "Trung tính",
+      "series": "Trung tính"
+    }
+  ],
+  "summary": "Hài lòng nhất: \u0027Thực phẩm\u0027 (100% tích cực). Không hài lòng nhất: \u0027Hỗ trợ y tế\u0027 (100% tiêu cực). Tiếp tục duy trì hiệu quả ở lĩnh vực Thực phẩm."
+}

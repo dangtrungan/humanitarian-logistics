@@ -1,0 +1,53 @@
+{
+  "disasterName": "Bão Yagi",
+  "disasterType": "Typhoon",
+  "startDate": "2024-09-06",
+  "endDate": "2024-09-30",
+  "language": "vi",
+  "keywords": [
+    "bão Yagi",
+    "bão số 3",
+    "Yagi",
+    "typhoon Yagi",
+    "cứu trợ",
+    "thiên tai",
+    "lũ lụt",
+    "sạt lở",
+    "khắc phục hậu quả",
+    "cứu hộ",
+    "cứu nạn"
+  ],
+  "hashtags": [
+    "#baoyagi",
+    "#baoso3",
+    "#Yagi",
+    "#typhoonYagi",
+    "#cuutro",
+    "#thientai",
+    "#khacphuc"
+  ],
+  "dataSources": ["twitter", "facebook", "tiktok", "youtube"],
+  "selectedAnalyzers": [
+    "sentiment_timeline",
+    "damage_analysis",
+    "relief_satisfaction",
+    "relief_timeline"
+  ],
+  "damageCategories": {
+    "Người bị ảnh hưởng": ["tử vong", "bị thương", "mất tích", "sơ tán"],
+    "Gián đoạn hoạt động kinh tế": ["nhà máy", "nông nghiệp", "kinh doanh", "sản xuất"],
+    "Nhà cửa/tòa nhà hư hỏng": ["sập nhà", "tốc mái", "ngập nhà", "hư hại"],
+    "Tài sản cá nhân": ["mất tài sản", "xe cộ", "đồ đạc"],
+    "Cơ sở hạ tầng": ["đường sá", "cầu", "điện", "nước", "viễn thông"],
+    "Môi trường": ["cây đổ", "ô nhiễm", "ngập úng"]
+  },
+  "reliefCategories": {
+    "Nhà ở": ["nhà tạm", "sửa nhà", "chỗ ở"],
+    "Giao thông": ["đường sá", "cầu", "di chuyển", "tắc đường"],
+    "Thực phẩm": ["đồ ăn", "nước uống", "lương thực", "thực phẩm"],
+    "Hỗ trợ y tế": ["bệnh viện", "thuốc", "cấp cứu", "y tế"],
+    "Tiền mặt": ["hỗ trợ tài chính", "tiền", "quyên góp", "bồi thường"]
+  },
+  "sentimentModel": "local",
+  "preprocessingPipeline": "basic"
+}

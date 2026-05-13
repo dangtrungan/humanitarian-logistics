@@ -1,0 +1,96 @@
+======================================================================
+HUMANITARIAN LOGISTICS ANALYSIS REPORT
+======================================================================
+Analysis: Sentiment Timeline Analysis (Bài toán 1)
+Type: sentiment_timeline
+----------------------------------------------------------------------
+SUMMARY:
+Phân tích 471 bài đăng từ 2024-09-06 đến 2024-09-30. Tích cực: 202 (42.9%), Tiêu cực: 148 (31.4%)
+----------------------------------------------------------------------
+DETAILED DATA:
+  totalPosts: 471
+  totalNeutral: 121
+  totalNegative: 148
+  negativeRatio: 0.31422505307855625
+  totalPositive: 202
+  positiveRatio: 0.4288747346072187
+----------------------------------------------------------------------
+CHART DATA (75 points):
+  Label: 2024-09-06 | Value: 8.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-06 | Value: 3.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-06 | Value: 6.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-07 | Value: 8.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-07 | Value: 7.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-07 | Value: 9.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-08 | Value: 6.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-08 | Value: 3.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-08 | Value: 4.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-09 | Value: 5.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-09 | Value: 4.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-09 | Value: 2.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-10 | Value: 5.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-10 | Value: 8.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-10 | Value: 4.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-11 | Value: 7.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-11 | Value: 4.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-11 | Value: 5.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-12 | Value: 6.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-12 | Value: 6.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-12 | Value: 7.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-13 | Value: 10.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-13 | Value: 7.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-13 | Value: 5.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-14 | Value: 9.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-14 | Value: 4.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-14 | Value: 8.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-15 | Value: 5.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-15 | Value: 6.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-15 | Value: 8.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-16 | Value: 8.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-16 | Value: 4.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-16 | Value: 4.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-17 | Value: 8.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-17 | Value: 9.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-17 | Value: 3.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-18 | Value: 11.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-18 | Value: 7.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-18 | Value: 4.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-19 | Value: 11.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-19 | Value: 5.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-19 | Value: 5.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-20 | Value: 8.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-20 | Value: 12.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-20 | Value: 4.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-21 | Value: 5.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-21 | Value: 7.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-21 | Value: 3.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-22 | Value: 13.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-22 | Value: 7.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-22 | Value: 6.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-23 | Value: 5.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-23 | Value: 4.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-23 | Value: 5.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-24 | Value: 16.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-24 | Value: 10.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-24 | Value: 5.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-25 | Value: 9.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-25 | Value: 4.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-25 | Value: 2.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-26 | Value: 6.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-26 | Value: 6.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-26 | Value: 2.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-27 | Value: 9.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-27 | Value: 2.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-27 | Value: 5.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-28 | Value: 8.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-28 | Value: 10.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-28 | Value: 7.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-29 | Value: 10.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-29 | Value: 3.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-29 | Value: 4.00 | Category: NEUTRAL | Series: Trung tính
+  Label: 2024-09-30 | Value: 6.00 | Category: POSITIVE | Series: Tích cực
+  Label: 2024-09-30 | Value: 6.00 | Category: NEGATIVE | Series: Tiêu cực
+  Label: 2024-09-30 | Value: 4.00 | Category: NEUTRAL | Series: Trung tính
+======================================================================
+Generated: 2026-05-13T10:40:16.747093767
+======================================================================

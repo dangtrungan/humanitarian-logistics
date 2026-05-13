@@ -1,0 +1,25 @@
+======================================================================
+HUMANITARIAN LOGISTICS ANALYSIS REPORT
+======================================================================
+Analysis: Damage Type Analysis (Bài toán 2)
+Type: damage_analysis
+----------------------------------------------------------------------
+SUMMARY:
+Thiệt hại được đề cập nhiều nhất: 'Cơ sở hạ tầng'. Tổng số lượt đề cập thiệt hại: 143. Phân bố: Cơ sở hạ tầng(117), Người bị ảnh hưởng(26)
+----------------------------------------------------------------------
+DETAILED DATA:
+  damageDetails: {Tài sản cá nhân={}, Cơ sở hạ tầng={total=117, nuoc=30, đuong sa=55, đien=32}, Môi trường={}, Gián đoạn hoạt động kinh tế={}, Nhà cửa/tòa nhà hư hỏng={}, Người bị ảnh hưởng={total=26, bi thuong=26}}
+  categoryTotals: {Tài sản cá nhân=0, Cơ sở hạ tầng=117, Môi trường=0, Gián đoạn hoạt động kinh tế=0, Nhà cửa/tòa nhà hư hỏng=0, Người bị ảnh hưởng=26}
+  mostMentioned: Cơ sở hạ tầng
+  totalMentions: 143
+----------------------------------------------------------------------
+CHART DATA (6 points):
+  Label: Tài sản cá nhân | Value: 0.00 | Category: damage | Series: 
+  Label: Cơ sở hạ tầng | Value: 117.00 | Category: damage | Series: 
+  Label: Môi trường | Value: 0.00 | Category: damage | Series: 
+  Label: Gián đoạn hoạt động kinh tế | Value: 0.00 | Category: damage | Series: 
+  Label: Nhà cửa/tòa nhà hư hỏng | Value: 0.00 | Category: damage | Series: 
+  Label: Người bị ảnh hưởng | Value: 26.00 | Category: damage | Series: 
+======================================================================
+Generated: 2026-05-13T10:40:16.800639314
+======================================================================
