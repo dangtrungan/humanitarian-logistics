@@ -11,6 +11,7 @@ import com.humanitarian.logistics.storage.DataStore;
 import com.humanitarian.logistics.storage.CsvDataStore;
 import com.humanitarian.logistics.storage.JsonDataStore;
 
+import java.io.File;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.Objects;
@@ -120,7 +121,28 @@ public class AnalysisEngine {
         addLog("Analysis complete. " + results.size() + " results generated.");
     }
 
+    private void cleanOldOutputs() {
+        File chartsDir = new File("data/charts");
+        if (chartsDir.exists()) {
+            File[] oldCharts = chartsDir.listFiles((dir, name) -> name.endsWith(".png"));
+            if (oldCharts != null) {
+                for (File f : oldCharts) f.delete();
+                addLog("Cleaned " + oldCharts.length + " old chart images.");
+            }
+        }
+        File reportsDir = new File("data/reports");
+        if (reportsDir.exists()) {
+            File[] oldReports = reportsDir.listFiles((dir, name) ->
+                name.endsWith(".html") || name.endsWith(".txt"));
+            if (oldReports != null) {
+                for (File f : oldReports) f.delete();
+                addLog("Cleaned " + oldReports.length + " old reports.");
+            }
+        }
+    }
+
     public void saveResults() {
+        cleanOldOutputs();
         addLog("Saving results...");
         for (DataStore store : dataStores) {
             store.savePosts(collectedPosts);

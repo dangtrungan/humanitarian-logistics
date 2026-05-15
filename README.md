@@ -23,7 +23,7 @@ Data Collection → Preprocessing → Analysis → Storage / Export / Visualizat
 | **Analysis** | Four analysis modules (see below) |
 | **Storage** | CSV and JSON output to `data/output/` |
 | **Export** | PNG charts via JFreeChart (bar, line, pie with percentage labels), narrative TXT/HTML reports with toggleable stats, search/filter, insights, conclusions, recommendations |
-| **UI** | Swing desktop GUI with 8 tabbed panels |
+| **UI** | Swing desktop GUI with 8 tabbed panels; each analysis tab shows saved PNG chart images (bar → line → pie) with prev/next navigation |
 
 ### The Four Analyses
 
