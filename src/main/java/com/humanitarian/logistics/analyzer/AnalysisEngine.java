@@ -13,6 +13,7 @@ import com.humanitarian.logistics.storage.JsonDataStore;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.Objects;
 
 public class AnalysisEngine {
     private final AppConfig appConfig;
@@ -128,15 +129,38 @@ public class AnalysisEngine {
             }
         }
 
+        String disasterName = appConfig.getAnalysisConfig().getDisasterName();
+
         for (AnalysisResult result : results) {
+            List<String> chartPaths = new ArrayList<>();
+
             try {
-                chartGenerator.saveChartToImage(
-                    chartGenerator.createBarChart(result, result.getAnalysisName()), 800, 500, result.getAnalysisType());
+                chartPaths.add(chartGenerator.saveChartToImage(
+                    chartGenerator.createBarChart(result, result.getAnalysisName()), 800, 500,
+                    result.getAnalysisType() + "_bar"));
+
+                chartPaths.add(chartGenerator.saveChartToImage(
+                    chartGenerator.createPieChart(result, result.getAnalysisName() + " - Phân bổ"), 600, 500,
+                    result.getAnalysisType() + "_pie"));
             } catch (Exception e) {
                 addLog("    Chart generation error: " + e.getMessage());
             }
-            reportExporter.exportTextReport(result);
-            reportExporter.exportHtmlReport(result);
+
+            String type = result.getAnalysisType();
+            if ("sentiment_timeline".equals(type) || "relief_timeline".equals(type)) {
+                try {
+                    chartPaths.add(chartGenerator.saveChartToImage(
+                        chartGenerator.createLineChart(result, result.getAnalysisName() + " - Xu hướng"), 800, 500,
+                        result.getAnalysisType() + "_line"));
+                } catch (Exception e) {
+                    addLog("    Line chart generation error: " + e.getMessage());
+                }
+            }
+
+            chartPaths.removeIf(Objects::isNull);
+
+            reportExporter.exportTextReport(result, chartPaths);
+            reportExporter.exportHtmlReport(result, chartPaths, disasterName);
         }
         addLog("Results saved to data/output/, data/charts/, data/reports/");
     }

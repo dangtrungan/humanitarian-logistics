@@ -13,7 +13,7 @@ public class ReliefSatisfactionAnalyzer implements Analyzer {
     }
 
     @Override
-    public String getName() { return "Relief Satisfaction Analysis (Bài toán 3)"; }
+    public String getName() { return "Relief Satisfaction Analysis"; }
 
     @Override
     public String getDescription() {
@@ -81,13 +81,90 @@ public class ReliefSatisfactionAnalyzer implements Analyzer {
 
         ReliefStats satisfiedStats = statsMap.get(mostSatisfied);
         ReliefStats dissatisfiedStats = statsMap.get(mostDissatisfied);
+        double satRate = satisfiedStats != null ? getPositiveRate(satisfiedStats) : 0;
+        double disRate = dissatisfiedStats != null ? getNegativeRate(dissatisfiedStats) : 0;
+
         result.setSummary(String.format(
             "Hài lòng nhất: '%s' (%.0f%% tích cực). Không hài lòng nhất: '%s' (%.0f%% tiêu cực). %s",
-            mostSatisfied,
-            satisfiedStats != null ? getPositiveRate(satisfiedStats) : 0,
-            mostDissatisfied,
-            dissatisfiedStats != null ? getNegativeRate(dissatisfiedStats) : 0,
+            mostSatisfied, satRate,
+            mostDissatisfied, disRate,
             buildRecommendation(mostSatisfied, mostDissatisfied)));
+
+        int totalMentions = statsMap.values().stream().mapToInt(s -> s.total).sum();
+        long totalPos = statsMap.values().stream().mapToInt(s -> s.positive).sum();
+        long totalNeg = statsMap.values().stream().mapToInt(s -> s.negative).sum();
+
+        StringBuilder narrative = new StringBuilder();
+        narrative.append(String.format(
+            "Báo cáo đánh giá mức độ hài lòng của người dân đối với các loại hàng cứu trợ " +
+            "trong bão Bão Yagi, dựa trên %d lượt đề cập trên mạng xã hội. ", totalMentions));
+        narrative.append(String.format(
+            "Nhìn chung, có %d phản hồi tích cực và %d phản hồi tiêu cực. ", totalPos, totalNeg));
+
+        if (satRate >= 60) {
+            narrative.append(String.format(
+                "Lĩnh vực được hài lòng nhất là '%s' với %.0f%% phản hồi tích cực, " +
+                "cho thấy công tác cứu trợ ở lĩnh vực này đáp ứng tốt nhu cầu người dân. ",
+                mostSatisfied, satRate));
+        } else {
+            narrative.append(String.format(
+                "Ngay cả lĩnh vực được đánh giá cao nhất là '%s' cũng chỉ đạt %.0f%% " +
+                "phản hồi tích cực, cho thấy còn nhiều thách thức trong công tác cứu trợ. ",
+                mostSatisfied, satRate));
+        }
+
+        if (disRate >= 40) {
+            narrative.append(String.format(
+                "Đáng lo ngại, '%s' có tới %.0f%% phản hồi tiêu cực, " +
+                "phản ánh sự bất bình đáng kể từ cộng đồng cần được giải quyết.",
+                mostDissatisfied, disRate));
+        }
+
+        result.setNarrativeSummary(narrative.toString());
+
+        for (Map.Entry<String, ReliefStats> e : statsMap.entrySet()) {
+            if (e.getValue().total > 0) {
+                double pos = getPositiveRate(e.getValue());
+                double neg = getNegativeRate(e.getValue());
+                if (pos > 50) {
+                    result.addInsight(String.format(
+                        "'%s': %d lượt đề cập với %.0f%% tích cực - đây là lĩnh vực " +
+                        "được đánh giá cao, cho thấy sự hài lòng của người dân.",
+                        e.getKey(), e.getValue().total, pos));
+                } else if (neg > 50) {
+                    result.addInsight(String.format(
+                        "'%s': %d lượt đề cập với %.0f%% tiêu cực - đây là lĩnh vực " +
+                        "cần được cải thiện khẩn cấp.",
+                        e.getKey(), e.getValue().total, neg));
+                } else {
+                    result.addInsight(String.format(
+                        "'%s': %d lượt đề cập với phản hồi trái chiều " +
+                        "(%.0f%% tích cực, %.0f%% tiêu cực).",
+                        e.getKey(), e.getValue().total, pos, neg));
+                }
+            }
+        }
+
+        if (totalPos < totalNeg) {
+            result.addConclusion(String.format(
+                "Tổng thể, mức độ hài lòng với các hàng cứu trợ còn thấp " +
+                "(%d tích cực so với %d tiêu cực). Công tác cứu trợ cần được " +
+                "cải thiện toàn diện để đáp ứng kỳ vọng của người dân.",
+                totalPos, totalNeg));
+        } else {
+            result.addConclusion(String.format(
+                "Tổng thể, mức độ hài lòng với các hàng cứu trợ ở mức khả quan " +
+                "(%d tích cực so với %d tiêu cực). Tuy nhiên vẫn cần tiếp tục " +
+                "cải thiện ở những lĩnh vực còn tồn tại.",
+                totalPos, totalNeg));
+        }
+
+        result.addRecommendation(
+            "Tập trung nguồn lực cải thiện các lĩnh vực có tỷ lệ phản hồi tiêu cực cao, " +
+            "đặc biệt là các vấn đề về nhà ở tạm thời và giao thông tiếp cận.");
+        result.addRecommendation(
+            "Duy trì và nhân rộng các mô hình cứu trợ hiệu quả ở những lĩnh vực " +
+            "được người dân đánh giá cao.");
 
         return result;
     }

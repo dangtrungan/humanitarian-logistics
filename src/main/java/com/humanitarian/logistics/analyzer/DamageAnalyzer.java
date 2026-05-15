@@ -14,7 +14,7 @@ public class DamageAnalyzer implements Analyzer {
     }
 
     @Override
-    public String getName() { return "Damage Type Analysis (Bài toán 2)"; }
+    public String getName() { return "Damage Type Analysis"; }
 
     @Override
     public String getDescription() {
@@ -74,6 +74,10 @@ public class DamageAnalyzer implements Analyzer {
 
         if (totalMentions == 0) {
             result.setSummary("Không tìm thấy đề cập thiệt hại nào trong dữ liệu thu thập được.");
+            result.setNarrativeSummary(
+                "Không phát hiện đề cập nào về thiệt hại trong các bài đăng thu thập được. " +
+                "Điều này có thể do dữ liệu chưa đầy đủ hoặc các bài đăng tập trung vào " +
+                "khía cạnh khác của thảm họa.");
         } else {
             result.setSummary(String.format(
                 "Thiệt hại được đề cập nhiều nhất: '%s'. " +
@@ -85,6 +89,63 @@ public class DamageAnalyzer implements Analyzer {
                     .filter(e -> e.getValue() > 0)
                     .map(e -> e.getKey() + "(" + e.getValue() + ")")
                     .collect(Collectors.joining(", "))));
+
+            List<String> categoriesWithData = categoryTotals.entrySet().stream()
+                .filter(e -> e.getValue() > 0)
+                .map(e -> e.getKey() + " (" + e.getValue() + " lượt)")
+                .collect(Collectors.toList());
+
+            StringBuilder narrative = new StringBuilder();
+            narrative.append(String.format(
+                "Báo cáo phân tích thiệt hại từ Bão Yagi dựa trên %d lượt đề cập " +
+                "trong các bài đăng mạng xã hội. ",
+                totalMentions));
+            narrative.append(String.format(
+                "Loại thiệt hại được nhắc đến nhiều nhất là '%s'. ", mostMentioned));
+            narrative.append("Các loại thiệt hại được ghi nhận bao gồm: ");
+            narrative.append(String.join("; ", categoriesWithData));
+            narrative.append(". ");
+
+            int maxVal = categoryTotals.values().stream().mapToInt(Integer::intValue).max().orElse(0);
+            double concentration = maxVal * 100.0 / totalMentions;
+            if (concentration > 50) {
+                narrative.append(String.format(
+                    "Đáng chú ý, '%s' chiếm tới %.0f%% tổng số lượt đề cập, " +
+                    "cho thấy đây là vấn đề cấp bách nhất cần ưu tiên xử lý.",
+                    mostMentioned, concentration));
+            }
+
+            result.setNarrativeSummary(narrative.toString());
+
+            result.addInsight(String.format(
+                "'%s' là loại thiệt hại được quan tâm nhất với %d lượt đề cập, " +
+                "chiếm %.0f%% tổng số.",
+                mostMentioned, maxVal, concentration));
+            for (Map.Entry<String, Integer> e : categoryTotals.entrySet()) {
+                if (e.getValue() > 0 && !e.getKey().equals(mostMentioned)) {
+                    double pct = e.getValue() * 100.0 / totalMentions;
+                    result.addInsight(String.format(
+                        "'%s' được nhắc đến %d lần (%.0f%%), phản ánh mối quan tâm " +
+                        "đáng kể từ cộng đồng.",
+                        e.getKey(), e.getValue(), pct));
+                    break;
+                }
+            }
+
+            result.addConclusion(String.format(
+                "Thiệt hại từ Bão Yagi tập trung chủ yếu vào lĩnh vực '%s', " +
+                "phản ánh đúng thực tế thiệt hại nặng nề mà cơn bão đã gây ra. " +
+                "Sự phân bố đề cập giữa các loại thiệt hại cho thấy mối quan tâm " +
+                "đa dạng của cộng đồng đối với các khía cạnh khác nhau của thảm họa.",
+                mostMentioned));
+
+            result.addRecommendation(String.format(
+                "Ưu tiên nguồn lực khắc phục '%s' - lĩnh vực được cộng đồng " +
+                "quan tâm nhất, đồng thời không xem nhẹ các loại thiệt hại khác.",
+                mostMentioned));
+            result.addRecommendation(
+                "Triển khai khảo sát thực địa để đối chiếu và bổ sung thông tin " +
+                "từ mạng xã hội nhằm có cái nhìn toàn diện về thiệt hại.");
         }
 
         return result;

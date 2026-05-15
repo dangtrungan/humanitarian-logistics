@@ -1,0 +1,478 @@
+{
+  "analysisName": "Sentiment Timeline Analysis (Bài toán 1)",
+  "analysisType": "sentiment_timeline",
+  "data": {
+    "totalPosts": 460,
+    "totalNeutral": 116,
+    "totalNegative": 141,
+    "negativeRatio": 0.3065217391304348,
+    "totalPositive": 203,
+    "positiveRatio": 0.44130434782608696
+  },
+  "chartData": [
+    {
+      "label": "2024-09-06",
+      "value": 8.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-06",
+      "value": 2.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-06",
+      "value": 6.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-07",
+      "value": 11.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-07",
+      "value": 4.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-07",
+      "value": 6.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-08",
+      "value": 5.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-08",
+      "value": 8.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-08",
+      "value": 5.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-09",
+      "value": 6.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-09",
+      "value": 6.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-09",
+      "value": 1.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-10",
+      "value": 9.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-10",
+      "value": 6.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-10",
+      "value": 4.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-11",
+      "value": 2.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-11",
+      "value": 9.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-11",
+      "value": 4.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-12",
+      "value": 11.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-12",
+      "value": 6.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-12",
+      "value": 8.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-13",
+      "value": 14.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-13",
+      "value": 3.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-13",
+      "value": 5.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-14",
+      "value": 4.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-14",
+      "value": 5.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-14",
+      "value": 4.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-15",
+      "value": 6.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-15",
+      "value": 5.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-15",
+      "value": 11.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-16",
+      "value": 6.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-16",
+      "value": 5.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-16",
+      "value": 2.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-17",
+      "value": 8.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-17",
+      "value": 6.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-17",
+      "value": 3.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-18",
+      "value": 12.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-18",
+      "value": 7.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-18",
+      "value": 9.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-19",
+      "value": 13.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-19",
+      "value": 4.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-19",
+      "value": 5.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-20",
+      "value": 9.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-20",
+      "value": 7.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-20",
+      "value": 5.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-21",
+      "value": 13.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-21",
+      "value": 7.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-21",
+      "value": 4.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-22",
+      "value": 12.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-22",
+      "value": 5.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-22",
+      "value": 2.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-23",
+      "value": 8.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-23",
+      "value": 4.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-23",
+      "value": 5.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-24",
+      "value": 6.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-24",
+      "value": 10.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-24",
+      "value": 6.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-25",
+      "value": 7.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-25",
+      "value": 3.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-25",
+      "value": 5.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-26",
+      "value": 4.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-26",
+      "value": 5.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-26",
+      "value": 1.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-27",
+      "value": 12.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-27",
+      "value": 7.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-27",
+      "value": 2.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-28",
+      "value": 6.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-28",
+      "value": 4.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-28",
+      "value": 7.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-29",
+      "value": 4.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-29",
+      "value": 6.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-29",
+      "value": 4.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    },
+    {
+      "label": "2024-09-30",
+      "value": 7.0,
+      "category": "POSITIVE",
+      "series": "Tích cực"
+    },
+    {
+      "label": "2024-09-30",
+      "value": 7.0,
+      "category": "NEGATIVE",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "2024-09-30",
+      "value": 2.0,
+      "category": "NEUTRAL",
+      "series": "Trung tính"
+    }
+  ],
+  "summary": "Phân tích 460 bài đăng từ 2024-09-06 đến 2024-09-30. Tích cực: 203 (44.1%), Tiêu cực: 141 (30.7%)",
+  "narrativeSummary": "Báo cáo phân tích tâm lý công chúng về Bão Yagi dựa trên 460 bài đăng trên mạng xã hội trong giai đoạn từ 2024-09-06 đến 2024-09-30. Kết quả cho thấy có 203 bài đăng mang tâm lý tích cực (chiếm 44.1%), 141 bài đăng tiêu cực (30.7%), và 116 bài đăng trung tính (25.2%). Nhìn chung, xu hướng dư luận trong giai đoạn này là tích cực, với tỷ lệ cảm xúc tích cực cao hơn đáng kể so với tiêu cực.",
+  "insights": [
+    "Tỷ lệ bài đăng tích cực (44.1%) cao hơn tỷ lệ tiêu cực (30.7%), cho thấy cộng đồng có sự lạc quan nhất định trong bối cảnh thiên tai.",
+    "Có 116 bài đăng mang sắc thái trung tính (25.2%), phản ánh một bộ phận người dùng chia sẻ thông tin mà không bày tỏ cảm xúc rõ ràng."
+  ],
+  "conclusions": [
+    "Dư luận về Bão Yagi trên mạng xã hội nghiêng về phía tích cực. Sự chênh lệch 13.5 điểm phần trăm giữa tỷ lệ tích cực và tiêu cực cho thấy cộng đồng đã có những phản ứng đa chiều trước tình hình thiệt hại và công tác cứu trợ."
+  ],
+  "recommendations": [
+    "Tiếp tục theo dõi diễn biến tâm lý công chúng hàng ngày để kịp thời điều chỉnh chiến lược truyền thông và cung cấp thông tin chính xác đến người dân.",
+    "Tăng cường các chiến dịch truyền thông tích cực nhằm duy trì tinh thần lạc quan và khuyến khích sự tham gia của cộng đồng vào công tác khắc phục hậu quả.",
+    "Cần có biện pháp xử lý các thông tin tiêu cực và lo ngại của người dân, đặc biệt là về công tác cứu trợ và khắc phục thiệt hại."
+  ]
+}

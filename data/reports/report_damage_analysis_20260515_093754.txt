@@ -1,0 +1,69 @@
+======================================================================
+BÃO YAGI - BÁO CÁO PHÂN TÍCH HÀNG CỨU TRỢ NHÂN ĐẠO
+======================================================================
+  Phân tích: Damage Type Analysis
+  Ngày tạo: 15/05/2026 09:37:54
+
+======================================================================
+TÓM TẮT TỔNG QUAN
+======================================================================
+Báo cáo phân tích thiệt hại từ Bão Yagi dựa trên 125 lượt đề cập
+       trong các bài đăng mạng xã hội. Loại thiệt hại được nhắc đến nhiều
+       nhất là 'Cơ sở hạ tầng'. Các loại thiệt hại được ghi nhận bao gồm:
+       Cơ sở hạ tầng (101 lượt); Người bị ảnh hưởng (24 lượt). Đáng chú
+       ý, 'Cơ sở hạ tầng' chiếm tới 81% tổng số lượt đề cập, cho thấy đây
+       là vấn đề cấp bách nhất cần ưu tiên xử lý.
+
+======================================================================
+THỐNG KÊ
+======================================================================
+  . DamageDetails: Tài sản cá nhân ({}), Cơ sở hạ tầng ({total=101, nuoc=25, đuong sa=50, đien=26}), Môi trường ({}), Gián đoạn hoạt động kinh tế ({}), Nhà cửa/tòa nhà hư hỏng ({}), Người bị ảnh hưởng ({total=24, bi thuong=24})
+  . CategoryTotals: Tài sản cá nhân (0), Cơ sở hạ tầng (101), Môi trường (0), Gián đoạn hoạt động kinh tế (0), Nhà cửa/tòa nhà hư hỏng (0), Người bị ảnh hưởng (24)
+  . Thiệt hại được nhắc đến nhiều nhất: Cơ sở hạ tầng
+  . Tổng lượt đề cập thiệt hại: 125
+
+======================================================================
+DỮ LIỆU CHI TIẾT
+======================================================================
+    Tài sản cá nhân: 0
+    Cơ sở hạ tầng: 101
+    Môi trường: 0
+    Gián đoạn hoạt động kinh tế: 0
+    Nhà cửa/tòa nhà hư hỏng: 0
+    Người bị ảnh hưởng: 24
+
+======================================================================
+PHÂN TÍCH CHUYÊN SÂU
+======================================================================
+  • 'Cơ sở hạ tầng' là loại thiệt hại được quan tâm nhất với 101
+       lượt đề cập, chiếm 81% tổng số.
+  • 'Người bị ảnh hưởng' được nhắc đến 24 lần (19%), phản ánh mối
+       quan tâm đáng kể từ cộng đồng.
+
+======================================================================
+KẾT LUẬN
+======================================================================
+  • Thiệt hại từ Bão Yagi tập trung chủ yếu vào lĩnh vực 'Cơ sở hạ
+       tầng', phản ánh đúng thực tế thiệt hại nặng nề mà cơn bão đã gây
+       ra. Sự phân bố đề cập giữa các loại thiệt hại cho thấy mối quan
+       tâm đa dạng của cộng đồng đối với các khía cạnh khác nhau của
+       thảm họa.
+
+======================================================================
+KHUYẾN NGHỊ
+======================================================================
+  • Ưu tiên nguồn lực khắc phục 'Cơ sở hạ tầng' - lĩnh vực được cộng
+       đồng quan tâm nhất, đồng thời không xem nhẹ các loại thiệt hại
+       khác.
+  • Triển khai khảo sát thực địa để đối chiếu và bổ sung thông tin
+       từ mạng xã hội nhằm có cái nhìn toàn diện về thiệt hại.
+
+======================================================================
+BIỂU ĐỒ
+======================================================================
+  data/charts/damage_analysis_bar_20260515_093754.png
+  data/charts/damage_analysis_pie_20260515_093754.png
+
+======================================================================
+--- HẾT BÁO CÁO ---
+======================================================================
