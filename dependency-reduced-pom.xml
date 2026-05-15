@@ -4,7 +4,7 @@
   <groupId>com.humanitarian</groupId>
   <artifactId>humanitarian-logistics</artifactId>
   <name>Humanitarian Logistics Social Media Analyzer</name>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <description>Social media data analysis for humanitarian logistics efficiency</description>
   <build>
     <plugins>
