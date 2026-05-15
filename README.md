@@ -180,6 +180,8 @@ Flask, TextBlob, NLTK, VADER, Transformers, scikit-learn, pandas, numpy
 
 The `MockDataCollector` generates reproducible posts from 34 Vietnamese-language templates. 16 hand-written sample posts are also available in `data/sample/yagi_sample_posts.json`. All mock data uses seed 42 for deterministic output.
 
+An actual web scraper was built on the `feature/scraper` branch, but was not integrated into the main codebase because the scraped data would not have enough variants to be useful for analysis.
+
 ## Output
 
 All generated artifacts go to `data/`:
