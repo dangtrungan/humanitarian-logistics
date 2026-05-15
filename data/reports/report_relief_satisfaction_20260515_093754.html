@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang='vi'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Relief Satisfaction Analysis - Bão Yagi</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-ui,sans-serif;background:#f0f2f5;color:#1a1a2e;line-height:1.6}
+.container{max-width:1000px;margin:0 auto;padding:20px}
+.header{background:linear-gradient(135deg,#1a237e,#283593);color:#fff;padding:30px;border-radius:12px 12px 0 0}
+.header h1{font-size:24px;margin-bottom:6px}
+.header .meta{font-size:13px;opacity:.85}
+.section{background:#fff;padding:25px;border-bottom:1px solid #e8e8e8}
+.section:last-child{border-radius:0 0 12px 12px}
+.section h2{color:#1a237e;font-size:18px;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid #e8e8e8}
+.summary-text{font-size:15px;color:#333;line-height:1.8;text-align:justify}
+.tg{display:flex;gap:10px;margin-bottom:15px;flex-wrap:wrap}
+.tg button{padding:8px 20px;border:2px solid #1a237e;background:#fff;color:#1a237e;border-radius:6px;cursor:pointer;font-weight:600;font-size:14px;transition:all .2s}
+.tg button.sel{background:#1a237e;color:#fff}
+.tg button:hover:not(.sel){background:#e8eaf6}
+.stat-card{background:#f5f7ff;border:1px solid #e0e3f0;border-radius:8px;padding:14px;text-align:center}
+.stat-card .label{font-size:12px;text-transform:uppercase;color:#666;letter-spacing:.5px}
+.stat-card .value{font-size:20px;font-weight:700;color:#1a237e;margin-top:4px}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.search-bar{width:100%;padding:10px 14px;border:2px solid #ddd;border-radius:8px;font-size:14px;margin-bottom:12px;outline:none;transition:border-color .2s}
+.search-bar:focus{border-color:#1a237e}
+.detail-table{width:100%;border-collapse:collapse;font-size:14px}
+.detail-table th{background:#1a237e;color:#fff;padding:10px 12px;text-align:left;font-weight:600}
+.detail-table td{padding:8px 12px;border-bottom:1px solid #eee}
+.detail-table tr:hover{background:#f5f7ff}
+.detail-table .series-cell{color:#666;font-size:13px}
+.no-results{color:#999;text-align:center;padding:20px;display:none}
+.chart-container{text-align:center}
+.chart-container img{max-width:100%;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.insight-item{padding:10px 14px;margin-bottom:8px;background:#f5f7ff;border-left:3px solid #1a237e;border-radius:0 6px 6px 0;font-size:14px;line-height:1.6}
+.conclusion-item{padding:10px 14px;margin-bottom:8px;background:#fff8e1;border-left:3px solid #f9a825;border-radius:0 6px 6px 0;font-size:14px;line-height:1.6}
+.recommendation-item{padding:10px 14px;margin-bottom:8px;background:#e8f5e9;border-left:3px solid #43a047;border-radius:0 6px 6px 0;font-size:14px;line-height:1.6}
+.footer{background:#1a237e;color:rgba(255,255,255,.7);padding:16px 30px;border-radius:0 0 12px 12px;font-size:12px;text-align:center}
+@media(max-width:600px){.container{padding:10px}.header{padding:20px}.section{padding:16px}.stats-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class='container'>
+<div class='header'>
+<h1>Relief Satisfaction Analysis</h1>
+<div class='meta'>Bão Yagi &mdash; 15/05/2026 09:37:54</div>
+</div>
+<div class='section'>
+<h2>Tóm tắt tổng quan</h2>
+<div class='summary-text'>Báo cáo đánh giá mức độ hài lòng của người dân đối với các loại hàng cứu trợ trong bão Bão Yagi, dựa trên 128 lượt đề cập trên mạng xã hội. Nhìn chung, có 25 phản hồi tích cực và 45 phản hồi tiêu cực. Lĩnh vực được hài lòng nhất là 'Thực phẩm' với 100% phản hồi tích cực, cho thấy công tác cứu trợ ở lĩnh vực này đáp ứng tốt nhu cầu người dân. Đáng lo ngại, 'Hỗ trợ y tế' có tới 100% phản hồi tiêu cực, phản ánh sự bất bình đáng kể từ cộng đồng cần được giải quyết.</div>
+</div>
+<div class='section'>
+<h2>Biểu đồ phân tích</h2>
+<div class='tg'>
+<button id='btnGraph' class='sel' onclick='showChart("graph")'>Biểu đồ cột / đường</button>
+<button id='btnPie' onclick='showChart("pie")'>Biểu đồ tròn</button>
+</div>
+<div id='viewGraph' style='display:block'>
+<div class='chart-container'>
+<img src='../charts/relief_satisfaction_bar_20260515_093754.png' alt='Biểu đồ' style='max-width:100%;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.08)'>
+</div>
+</div>
+<div id='viewPie' style='display:none'>
+<div class='chart-container'>
+<img src='../charts/relief_satisfaction_pie_20260515_093754.png' alt='Biểu đồ tròn' style='max-width:100%;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.08)'>
+</div>
+</div>
+<div class='section'>
+<h2>Thống kê dữ liệu</h2>
+<div class='tg'>
+<button id='btnStatsQuick' class='sel' onclick='showStats("quick")'>Xem nhanh</button>
+<button id='btnStatsDetail' onclick='showStats("detail")'>Xem chi tiết</button>
+</div>
+<div id='viewStatsQuick' style='display:block'>
+<div class='stats-grid'>
+<div class='stat-card'>
+<div class='label'>Hài lòng nhất</div>
+<div class='value'>Thực phẩm</div>
+</div>
+<div class='stat-card'>
+<div class='label'>Không hài lòng nhất</div>
+<div class='value'>Hỗ trợ y tế</div>
+</div>
+</div>
+</div>
+<div id='viewStatsDetail' style='display:none'>
+<input id='searchInput' class='search-bar' type='text' placeholder='Tìm kiếm dữ liệu...' onkeyup='ft()'>
+<table class='detail-table'>
+<thead><tr><th>Nhãn</th><th>Giá trị</th><th>Loại</th><th>Nhóm</th></tr></thead>
+<tbody id='detailBody'>
+<tr><td>Tiền mặt</td><td>0</td><td>Hài lòng</td><td class='series-cell'>Tích cực</td></tr>
+<tr><td>Tiền mặt</td><td>0</td><td>Không hài lòng</td><td class='series-cell'>Tiêu cực</td></tr>
+<tr><td>Tiền mặt</td><td>29</td><td>Trung tính</td><td class='series-cell'>Trung tính</td></tr>
+<tr><td>Nhà ở</td><td>0</td><td>Hài lòng</td><td class='series-cell'>Tích cực</td></tr>
+<tr><td>Nhà ở</td><td>0</td><td>Không hài lòng</td><td class='series-cell'>Tiêu cực</td></tr>
+<tr><td>Nhà ở</td><td>0</td><td>Trung tính</td><td class='series-cell'>Trung tính</td></tr>
+<tr><td>Hỗ trợ y tế</td><td>0</td><td>Hài lòng</td><td class='series-cell'>Tích cực</td></tr>
+<tr><td>Hỗ trợ y tế</td><td>24</td><td>Không hài lòng</td><td class='series-cell'>Tiêu cực</td></tr>
+<tr><td>Hỗ trợ y tế</td><td>0</td><td>Trung tính</td><td class='series-cell'>Trung tính</td></tr>
+<tr><td>Thực phẩm</td><td>25</td><td>Hài lòng</td><td class='series-cell'>Tích cực</td></tr>
+<tr><td>Thực phẩm</td><td>0</td><td>Không hài lòng</td><td class='series-cell'>Tiêu cực</td></tr>
+<tr><td>Thực phẩm</td><td>0</td><td>Trung tính</td><td class='series-cell'>Trung tính</td></tr>
+<tr><td>Giao thông</td><td>0</td><td>Hài lòng</td><td class='series-cell'>Tích cực</td></tr>
+<tr><td>Giao thông</td><td>21</td><td>Không hài lòng</td><td class='series-cell'>Tiêu cực</td></tr>
+<tr><td>Giao thông</td><td>29</td><td>Trung tính</td><td class='series-cell'>Trung tính</td></tr>
+</tbody></table>
+<div id='noResults' class='no-results'>Không tìm thấy dữ liệu phù hợp</div>
+</div>
+</div>
+<div class='section'>
+<h2>Phân tích chuyên sâu</h2>
+<div class='insight-item'>'Tiền mặt': 29 lượt đề cập với phản hồi trái chiều (0% tích cực, 0% tiêu cực).</div>
+<div class='insight-item'>'Hỗ trợ y tế': 24 lượt đề cập với 100% tiêu cực - đây là lĩnh vực cần được cải thiện khẩn cấp.</div>
+<div class='insight-item'>'Thực phẩm': 25 lượt đề cập với 100% tích cực - đây là lĩnh vực được đánh giá cao, cho thấy sự hài lòng của người dân.</div>
+<div class='insight-item'>'Giao thông': 50 lượt đề cập với phản hồi trái chiều (0% tích cực, 42% tiêu cực).</div>
+</div>
+<div class='section'>
+<h2>Kết luận</h2>
+<div class='conclusion-item'>Tổng thể, mức độ hài lòng với các hàng cứu trợ còn thấp (25 tích cực so với 45 tiêu cực). Công tác cứu trợ cần được cải thiện toàn diện để đáp ứng kỳ vọng của người dân.</div>
+</div>
+<div class='section'>
+<h2>Khuyến nghị</h2>
+<div class='recommendation-item'>Tập trung nguồn lực cải thiện các lĩnh vực có tỷ lệ phản hồi tiêu cực cao, đặc biệt là các vấn đề về nhà ở tạm thời và giao thông tiếp cận.</div>
+<div class='recommendation-item'>Duy trì và nhân rộng các mô hình cứu trợ hiệu quả ở những lĩnh vực được người dân đánh giá cao.</div>
+</div>
+<div class='footer'>
+Báo cáo được tạo tự động bởi Hệ thống Phân tích Hàng cứu trợ Nhân đạo &mdash; 15/05/2026 09:37:54
+</div>
+</div>
+<script>
+var gi=0,gt=1;
+function showChart(t){
+var g=document.getElementById('viewGraph');g?g.style.display=t==='graph'?'block':'none':null;
+var bg=document.getElementById('btnGraph');if(bg)bg.className=t==='graph'?'sel':'';
+var p=document.getElementById('viewPie');p?p.style.display=t==='pie'?'block':'none':null;
+var bp=document.getElementById('btnPie');if(bp)bp.className=t==='pie'?'sel':'';
+}
+function showStats(t){
+var sq=document.getElementById('viewStatsQuick');if(sq)sq.style.display=t==='quick'?'block':'none';
+var sd=document.getElementById('viewStatsDetail');if(sd)sd.style.display=t==='detail'?'block':'none';
+var bq=document.getElementById('btnStatsQuick');if(bq)bq.className=t==='quick'?'sel':'';
+var bd=document.getElementById('btnStatsDetail');if(bd)bd.className=t==='detail'?'sel':'';
+}
+function ft(){
+var q=document.getElementById('searchInput');if(!q)return;
+var v=q.value.toLowerCase();
+var tb=document.getElementById('detailBody');if(!tb)return;
+var r=tb.getElementsByTagName('tr');
+var h=false;
+for(var i=0;i<r.length;i++){
+var m=r[i].textContent.toLowerCase().indexOf(v)>-1;
+r[i].style.display=m?'':'none';
+if(m)h=true;
+}
+var n=document.getElementById('noResults');if(n)n.style.display=h?'none':'block';
+}
+</script>
+</body>
+</html>

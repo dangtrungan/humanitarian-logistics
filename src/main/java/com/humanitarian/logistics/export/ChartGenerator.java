@@ -6,11 +6,14 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.plot.PiePlot;
+import org.jfree.chart.labels.StandardPieSectionLabelGenerator;
 import org.jfree.chart.renderer.category.BarRenderer;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
+import org.jfree.data.general.DefaultPieDataset;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -90,26 +93,66 @@ public class ChartGenerator {
         return chart;
     }
 
-    public void saveChartToImage(JFreeChart chart, int width, int height, String filename) {
+    public JFreeChart createPieChart(AnalysisResult result, String title) {
+        DefaultPieDataset<String> dataset = new DefaultPieDataset<>();
+        Map<String, Double> aggregated = new LinkedHashMap<>();
+
+        for (AnalysisResult.ChartDataPoint point : result.getChartData()) {
+            String key = point.getSeries() != null ? point.getSeries() : point.getLabel();
+            aggregated.merge(key, point.getValue(), Double::sum);
+        }
+
+        for (Map.Entry<String, Double> entry : aggregated.entrySet()) {
+            if (entry.getValue() > 0) {
+                dataset.setValue(entry.getKey(), entry.getValue());
+            }
+        }
+
+        JFreeChart chart = ChartFactory.createPieChart(
+            title, dataset, true, true, false);
+
+        PiePlot plot = (PiePlot) chart.getPlot();
+        plot.setBackgroundPaint(Color.WHITE);
+        plot.setOutlinePaint(null);
+        plot.setSectionOutlinesVisible(false);
+        plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0}: {2}"));
+        plot.setLabelFont(new Font("SansSerif", Font.PLAIN, 13));
+        plot.setSimpleLabels(true);
+
+        return chart;
+    }
+
+    public String saveChartToImage(JFreeChart chart, int width, int height, String filename) {
         try {
-            String filePath = outputDir + "/" + filename + "_"
-                + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss")) + ".png";
+            String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
+            String filePath = outputDir + "/" + filename + "_" + timestamp + ".png";
             BufferedImage image = chart.createBufferedImage(width, height);
             ImageIO.write(image, "png", new File(filePath));
+            return filePath;
         } catch (IOException e) {
             e.printStackTrace();
+            return null;
         }
     }
 
     public JFreeChart createPieChart(Map<String, Integer> data, String title) {
-        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+        DefaultPieDataset<String> dataset = new DefaultPieDataset<>();
         for (Map.Entry<String, Integer> entry : data.entrySet()) {
-            dataset.addValue(entry.getValue(), "Count", entry.getKey());
+            if (entry.getValue() > 0) {
+                dataset.setValue(entry.getKey(), entry.getValue());
+            }
         }
 
-        JFreeChart chart = ChartFactory.createBarChart(
-            title, "Category", "Count", dataset,
-            PlotOrientation.VERTICAL, true, true, false);
+        JFreeChart chart = ChartFactory.createPieChart(
+            title, dataset, true, true, false);
+
+        PiePlot plot = (PiePlot) chart.getPlot();
+        plot.setBackgroundPaint(Color.WHITE);
+        plot.setOutlinePaint(null);
+        plot.setSectionOutlinesVisible(false);
+        plot.setLabelGenerator(new StandardPieSectionLabelGenerator("{0}: {2}"));
+        plot.setLabelFont(new Font("SansSerif", Font.PLAIN, 13));
+        plot.setSimpleLabels(true);
 
         return chart;
     }

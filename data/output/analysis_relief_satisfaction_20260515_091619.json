@@ -1,0 +1,147 @@
+{
+  "analysisName": "Relief Satisfaction Analysis (Bài toán 3)",
+  "analysisType": "relief_satisfaction",
+  "data": {
+    "mostSatisfied": "Thực phẩm",
+    "reliefStats": {
+      "Tiền mặt": {
+        "total": 25,
+        "positive": 0,
+        "negative": 0,
+        "neutral": 25
+      },
+      "Nhà ở": {
+        "total": 0,
+        "positive": 0,
+        "negative": 0,
+        "neutral": 0
+      },
+      "Hỗ trợ y tế": {
+        "total": 20,
+        "positive": 0,
+        "negative": 20,
+        "neutral": 0
+      },
+      "Thực phẩm": {
+        "total": 24,
+        "positive": 24,
+        "negative": 0,
+        "neutral": 0
+      },
+      "Giao thông": {
+        "total": 50,
+        "positive": 0,
+        "negative": 28,
+        "neutral": 22
+      }
+    },
+    "mostDissatisfied": "Hỗ trợ y tế"
+  },
+  "chartData": [
+    {
+      "label": "Tiền mặt",
+      "value": 0.0,
+      "category": "Hài lòng",
+      "series": "Tích cực"
+    },
+    {
+      "label": "Tiền mặt",
+      "value": 0.0,
+      "category": "Không hài lòng",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "Tiền mặt",
+      "value": 25.0,
+      "category": "Trung tính",
+      "series": "Trung tính"
+    },
+    {
+      "label": "Nhà ở",
+      "value": 0.0,
+      "category": "Hài lòng",
+      "series": "Tích cực"
+    },
+    {
+      "label": "Nhà ở",
+      "value": 0.0,
+      "category": "Không hài lòng",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "Nhà ở",
+      "value": 0.0,
+      "category": "Trung tính",
+      "series": "Trung tính"
+    },
+    {
+      "label": "Hỗ trợ y tế",
+      "value": 0.0,
+      "category": "Hài lòng",
+      "series": "Tích cực"
+    },
+    {
+      "label": "Hỗ trợ y tế",
+      "value": 20.0,
+      "category": "Không hài lòng",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "Hỗ trợ y tế",
+      "value": 0.0,
+      "category": "Trung tính",
+      "series": "Trung tính"
+    },
+    {
+      "label": "Thực phẩm",
+      "value": 24.0,
+      "category": "Hài lòng",
+      "series": "Tích cực"
+    },
+    {
+      "label": "Thực phẩm",
+      "value": 0.0,
+      "category": "Không hài lòng",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "Thực phẩm",
+      "value": 0.0,
+      "category": "Trung tính",
+      "series": "Trung tính"
+    },
+    {
+      "label": "Giao thông",
+      "value": 0.0,
+      "category": "Hài lòng",
+      "series": "Tích cực"
+    },
+    {
+      "label": "Giao thông",
+      "value": 28.0,
+      "category": "Không hài lòng",
+      "series": "Tiêu cực"
+    },
+    {
+      "label": "Giao thông",
+      "value": 22.0,
+      "category": "Trung tính",
+      "series": "Trung tính"
+    }
+  ],
+  "summary": "Hài lòng nhất: \u0027Thực phẩm\u0027 (100% tích cực). Không hài lòng nhất: \u0027Hỗ trợ y tế\u0027 (100% tiêu cực). Tiếp tục duy trì hiệu quả ở lĩnh vực Thực phẩm.",
+  "narrativeSummary": "Báo cáo đánh giá mức độ hài lòng của người dân đối với các loại hàng cứu trợ trong bão Bão Yagi, dựa trên 119 lượt đề cập trên mạng xã hội. Nhìn chung, có 24 phản hồi tích cực và 48 phản hồi tiêu cực. Lĩnh vực được hài lòng nhất là \u0027Thực phẩm\u0027 với 100% phản hồi tích cực, cho thấy công tác cứu trợ ở lĩnh vực này đáp ứng tốt nhu cầu người dân. Đáng lo ngại, \u0027Hỗ trợ y tế\u0027 có tới 100% phản hồi tiêu cực, phản ánh sự bất bình đáng kể từ cộng đồng cần được giải quyết.",
+  "insights": [
+    "\u0027Tiền mặt\u0027: 25 lượt đề cập với phản hồi trái chiều (0% tích cực, 0% tiêu cực).",
+    "\u0027Hỗ trợ y tế\u0027: 20 lượt đề cập với 100% tiêu cực - đây là lĩnh vực cần được cải thiện khẩn cấp.",
+    "\u0027Thực phẩm\u0027: 24 lượt đề cập với 100% tích cực - đây là lĩnh vực được đánh giá cao, cho thấy sự hài lòng của người dân.",
+    "\u0027Giao thông\u0027: 50 lượt đề cập với 56% tiêu cực - đây là lĩnh vực cần được cải thiện khẩn cấp."
+  ],
+  "conclusions": [
+    "Tổng thể, mức độ hài lòng với các hàng cứu trợ còn thấp (24 tích cực so với 48 tiêu cực). Công tác cứu trợ cần được cải thiện toàn diện để đáp ứng kỳ vọng của người dân."
+  ],
+  "recommendations": [
+    "Tập trung nguồn lực cải thiện các lĩnh vực có tỷ lệ phản hồi tiêu cực cao, đặc biệt là các vấn đề về nhà ở tạm thời và giao thông tiếp cận.",
+    "Duy trì và nhân rộng các mô hình cứu trợ hiệu quả ở những lĩnh vực được người dân đánh giá cao."
+  ]
+}

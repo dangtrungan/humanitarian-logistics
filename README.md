@@ -22,7 +22,7 @@ Data Collection → Preprocessing → Analysis → Storage / Export / Visualizat
 | **Preprocessing** | Basic (URL/mention/hashtag removal) and Advanced (Vietnamese stopwords, accent normalization) |
 | **Analysis** | Four analysis modules (see below) |
 | **Storage** | CSV and JSON output to `data/output/` |
-| **Export** | PNG charts via JFreeChart, TXT/HTML reports |
+| **Export** | PNG charts via JFreeChart (bar, line, pie with percentage labels), narrative TXT/HTML reports with toggleable stats, search/filter, insights, conclusions, recommendations |
 | **UI** | Swing desktop GUI with 8 tabbed panels |
 
 ### The Four Analyses
@@ -75,8 +75,10 @@ src/main/java/com/humanitarian/logistics/
 │   ├── SentimentApiClient.java      # HTTP client for Python API
 │   └── PythonSentimentAdapter.java  # Adapts Python API to SentimentAnalyzer
 ├── export/
-│   ├── ChartGenerator.java          # JFreeChart PNG export
-│   └── ReportExporter.java          # TXT/HTML report export
+│   ├── ChartGenerator.java          # JFreeChart PNG export (bar, line, pie with %)
+│   └── ReportExporter.java          # Narrative TXT/HTML reports with toggleable stats,
+│                                    #   search/filter, embedded charts, insights,
+│                                    #   conclusions, and recommendations
 └── ui/
     ├── MainFrame.java               # Main window with tabs
     ├── DashboardPanel.java          # Overview stats
@@ -183,8 +185,23 @@ The `MockDataCollector` generates reproducible posts from 34 Vietnamese-language
 All generated artifacts go to `data/`:
 
 - `data/output/` — CSV and JSON analysis results
-- `data/charts/` — PNG bar charts, line charts, and pie charts
-- `data/reports/` — TXT and HTML formatted reports
+- `data/charts/` — PNG charts (bar, line, and pie with percentage labels)
+- `data/reports/` — Narrative TXT and HTML reports
+
+### Reports
+
+Each analysis produces a self-contained HTML report and a plain-text TXT report with:
+
+| Section | Description |
+|---|---|
+| **Executive Summary** | Full-paragraph narrative summary of findings |
+| **Charts** | Toggleable views between bar/line charts and pie charts, with navigation for multiple charts of each type |
+| **Statistics** | Quick-view cards with key metrics + detailed searchable/filterable table (toggleable) |
+| **Insights** | Key findings derived from the data, written in clear sentences |
+| **Conclusions** | Overall conclusions drawn from the analysis |
+| **Recommendations** | Actionable recommendations for humanitarian response |
+
+Charts include bar charts, line charts (for timeline analyses), and pie charts with percentage labels on each slice.
 
 ## License
 
