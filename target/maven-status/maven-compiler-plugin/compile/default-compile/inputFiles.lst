@@ -12,7 +12,7 @@
 /home/an/Work/humanitarian-logistics/src/main/java/com/humanitarian/logistics/apiclient/SentimentApiClient.java
 /home/an/Work/humanitarian-logistics/src/main/java/com/humanitarian/logistics/collector/DataCollector.java
 /home/an/Work/humanitarian-logistics/src/main/java/com/humanitarian/logistics/collector/DataCollectorFactory.java
-/home/an/Work/humanitarian-logistics/src/main/java/com/humanitarian/logistics/collector/MockDataCollector.java
+/home/an/Work/humanitarian-logistics/src/main/java/com/humanitarian/logistics/collector/WebScrapingCollector.java
 /home/an/Work/humanitarian-logistics/src/main/java/com/humanitarian/logistics/config/AppConfig.java
 /home/an/Work/humanitarian-logistics/src/main/java/com/humanitarian/logistics/export/ChartGenerator.java
 /home/an/Work/humanitarian-logistics/src/main/java/com/humanitarian/logistics/export/ReportExporter.java

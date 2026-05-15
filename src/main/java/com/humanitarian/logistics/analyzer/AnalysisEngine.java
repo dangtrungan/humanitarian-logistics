@@ -169,9 +169,9 @@ public class AnalysisEngine {
         addLog("=== FULL PIPELINE START ===");
         collectData();
         if (collectedPosts.isEmpty()) {
-            addLog("No data collected. Using sample data.");
-            collectedPosts = com.humanitarian.logistics.collector.MockDataCollector.generateYagiSampleData();
-            addLog("Generated " + collectedPosts.size() + " sample posts.");
+            addLog("No data collected from web. Using fallback sample data.");
+            collectedPosts = com.humanitarian.logistics.collector.WebScrapingCollector.generateFallbackSample();
+            addLog("Generated " + collectedPosts.size() + " fallback posts.");
         }
         preprocessData();
         runAnalysis();

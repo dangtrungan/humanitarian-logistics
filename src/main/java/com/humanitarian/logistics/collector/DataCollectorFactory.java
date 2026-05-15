@@ -20,11 +20,11 @@ public class DataCollectorFactory {
     }
 
     private void registerDefaults() {
-        registerCollector("twitter", new MockDataCollector("Twitter"));
-        registerCollector("facebook", new MockDataCollector("Facebook"));
-        registerCollector("tiktok", new MockDataCollector("TikTok"));
-        registerCollector("youtube", new MockDataCollector("YouTube"));
-        registerCollector("mock", new MockDataCollector("Mock"));
+        registerCollector("twitter", new WebScrapingCollector("Twitter"));
+        registerCollector("facebook", new WebScrapingCollector("Facebook"));
+        registerCollector("tiktok", new WebScrapingCollector("TikTok"));
+        registerCollector("youtube", new WebScrapingCollector("YouTube"));
+        registerCollector("mock", new WebScrapingCollector("Tổng hợp"));
     }
 
     public void registerCollector(String name, DataCollector collector) {
