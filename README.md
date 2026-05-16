@@ -186,9 +186,9 @@ An actual web scraper was built on the `feature/scraper` branch, but was not int
 
 All generated artifacts go to `data/`:
 
-- `data/output/` — CSV and JSON analysis results
-- `data/charts/` — PNG charts (bar, line, and pie with percentage labels)
-- `data/reports/` — Narrative TXT and HTML reports
+- `data/output/` - CSV and JSON analysis results
+- `data/charts/` - PNG charts (bar, line, and pie with percentage labels)
+- `data/reports/` - Narrative TXT and HTML reports
 
 ### Reports
 
@@ -207,7 +207,7 @@ Charts include bar charts, line charts (for timeline analyses), and pie charts w
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT - see [LICENSE](LICENSE).
 
 ## Author
 
